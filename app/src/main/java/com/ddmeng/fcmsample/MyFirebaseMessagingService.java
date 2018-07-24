@@ -6,10 +6,12 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
-    private static final String TAG = "FCM";
+    private static final String TAG = "FCM-TEST";
+
     @Override
     public void onNewToken(String s) {
         super.onNewToken(s);
+        Log.d(TAG, "fcm token: " + s);
     }
 
     @Override
